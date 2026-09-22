@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phoebe Botsford, MS, LPCC — Mental Health Therapist</title>
+<meta name="description" content="Phoebe Botsford, MS, LPCC — mental health therapist in Denver, CO. Child, adolescent, adult & family counseling. Trauma-informed, trained in ACT and EMDR.">
+<meta property="og:title" content="Phoebe Botsford, MS, LPCC">
+<meta property="og:description" content="Mental Health Therapist · Child, Adolescent & Family Counseling · Denver, CO">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phoebebotsford.com/">
+<link rel="canonical" href="https://phoebebotsford.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --ink: #2b2a27;
+    --muted: #6b6860;
+    --line: #e6e0d6;
+    --accent: #5f7a63;        /* sage */
+    --accent-soft: #e8efe6;
+    --clay: #b9785a;
+    --radius: 14px;
+    --max: 900px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1c1a;
+      --surface: #232522;
+      --ink: #ecebe6;
+      --muted: #a6a39b;
+      --line: #34372f;
+      --accent: #9dbb9f;
+      --accent-soft: #2a322a;
+      --clay: #d59a7c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--clay); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { font-family: Fraunces, Georgia, serif; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+  nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; font-size: .92rem; }
+  nav ul a { color: var(--muted); text-decoration: none; }
+  nav ul a:hover { color: var(--ink); }
+  @media (max-width: 700px) { nav ul { display: none; } }
+
+  /* Hero */
+  header.hero { padding: 72px 0 48px; }
+  .hero .wrap { display: grid; grid-template-columns: 200px 1fr; gap: 44px; align-items: center; }
+  .portrait {
+    width: 200px; aspect-ratio: 4/5; border-radius: 100px 100px var(--radius) var(--radius);
+    background: var(--accent-soft); overflow: hidden; position: relative;
+    display: grid; place-items: center;
+  }
+  .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .portrait .initials { font-family: Fraunces, Georgia, serif; font-size: 3.2rem; color: var(--accent); }
+  .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 600; color: var(--clay); margin: 0 0 10px; }
+  h1 { font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: clamp(2.3rem, 5vw, 3.3rem); line-height: 1.1; margin: 0 0 10px; }
+  h1 .cred { color: var(--muted); font-size: .5em; margin-left: 6px; white-space: nowrap; }
+  .tagline { font-size: .95rem; color: var(--accent); font-weight: 500; margin: 0 0 16px; }
+  .lede { font-size: 1.1rem; color: var(--muted); margin: 0 0 24px; max-width: 36em; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 999px;
+    font-weight: 500; font-size: .95rem; text-decoration: none; border: 1px solid var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: var(--bg); }
+  .btn.primary:hover { background: var(--clay); border-color: var(--clay); color: var(--bg); }
+  .btn.ghost { color: var(--accent); }
+  .btn.ghost:hover { border-color: var(--clay); color: var(--clay); }
+  @media (max-width: 640px) {
+    header.hero { padding: 44px 0 32px; }
+    .hero .wrap { grid-template-columns: 1fr; gap: 28px; }
+    .portrait { width: 150px; }
+  }
+
+  /* Stats strip */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); margin-bottom: 56px; }
+  .stat { padding: 18px 20px; border-left: 1px solid var(--line); }
+  .stat:first-child { border-left: 0; }
+  .stat b { display: block; font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 1.6rem; line-height: 1.2; color: var(--ink); }
+  .stat span { font-size: .85rem; color: var(--muted); }
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(3) { border-left: 0; }
+    .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 1.9rem; margin: 0 0 22px; }
+  h3 { font-size: 1.02rem; font-weight: 600; margin: 0; }
+  p { margin: 0 0 16px; }
+  blockquote {
+    margin: 8px 0 24px; padding: 4px 0 4px 22px; border-left: 3px solid var(--clay);
+    font-family: Fraunces, Georgia, serif; font-size: 1.3rem; line-height: 1.5;
+  }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+  .chips li { background: var(--accent-soft); color: var(--ink); padding: 6px 14px; border-radius: 999px; font-size: .9rem; }
+  .chips.outline li { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+  .sub { font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); font-weight: 600; margin: 32px 0 12px; }
+  .sub:first-of-type { margin-top: 0; }
+
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .card p { color: var(--muted); font-size: .95rem; margin: 8px 0 0; }
+  @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+
+  /* Care process */
+  .process { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; counter-reset: step; }
+  .process li { counter-increment: step; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; font-size: .92rem; line-height: 1.4; }
+  .process li::before { content: counter(step, decimal-leading-zero); display: block; font-family: Fraunces, Georgia, serif; color: var(--clay); font-size: 1.2rem; margin-bottom: 6px; }
+  @media (max-width: 760px) { .process { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 420px) { .process { grid-template-columns: 1fr; } }
+
+  /* Timeline */
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .timeline > li { display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px dashed var(--line); }
+  .timeline > li:last-child { border-bottom: 0; }
+  .when { color: var(--muted); font-size: .9rem; padding-top: 2px; }
+  .where { color: var(--muted); font-size: .95rem; }
+  .timeline ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: .95rem; }
+  .timeline ul li { margin-bottom: 6px; }
+  .timeline ul li::marker { color: var(--accent); }
+  @media (max-width: 640px) { .timeline > li { grid-template-columns: 1fr; gap: 2px; } }
+
+  dl.facts { display: grid; grid-template-columns: 180px 1fr; gap: 14px 24px; margin: 0; }
+  dl.facts dt { color: var(--muted); font-size: .92rem; }
+  dl.facts dd { margin: 0; }
+  dl.facts dd small { display: block; color: var(--muted); font-size: .88rem; }
+  @media (max-width: 640px) { dl.facts { grid-template-columns: 1fr; gap: 2px; } dl.facts dd { margin-bottom: 12px; } }
+
+  footer { padding: 40px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  .crisis { font-size: .85rem; color: var(--muted); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; margin-top: 28px; }
+
+  @media print {
+    nav, .btns, .crisis { display: none; }
+    body { background: #fff; color: #000; font-size: 11pt; }
+    section { padding: 16px 0; }
+    .stats { margin-bottom: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Phoebe Botsford</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#focus">Focus</a></li>
+      <li><a href="#strengths">Strengths</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="portrait">
+      <span class="initials" aria-hidden="true">PB</span>
+      <img src="assets/headshot.jpg" alt="Portrait of Phoebe Botsford" onerror="this.remove()">
+    </div>
+    <div>
+      <p class="eyebrow">Mental Health Therapist · Denver, CO</p>
+      <h1>Phoebe Botsford<span class="cred">MS, LPCC</span></h1>
+      <p class="tagline">Child, Adolescent &amp; Family Counseling</p>
+      <p class="lede">A calm, warm, and adaptable clinician supporting children, adolescents, adults, and families through trauma, anxiety, ADHD, depression, and life's harder transitions, with ACT and EMDR.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://www.linkedin.com/in/phoebe-botsford/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn ghost" href="#experience">View experience</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats" role="list">
+    <div class="stat" role="listitem"><b>6+ yrs</b><span>in human services, since 2020</span></div>
+    <div class="stat" role="listitem"><b>4</b><span>clinical settings: outpatient, university, community, behavioral health</span></div>
+    <div class="stat" role="listitem"><b>~26</b><span>active clients in current caseload</span></div>
+    <div class="stat" role="listitem"><b>ACT · EMDR</b><span>core modalities</span></div>
+  </div>
+</div>
+
+<main>
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>I'm a Licensed Professional Counselor Candidate with experience delivering mental health services across outpatient, university counseling, community, and behavioral health settings. I've supported children, adolescents, adults, and families experiencing trauma, anxiety, depression, ADHD, relationship concerns, academic stress, and severe and persistent mental illness, managing the full arc of care from assessment and treatment planning through intervention, crisis response, and ongoing progress review.</p>
+      <blockquote>“Therapy with me is a space to let go and be yourself: no masks, no judgment, just curiosity, acceptance, and compassion.”</blockquote>
+      <p>I have a deeply held belief in the power of listening and acceptance. It can be scary to trust in yourself, especially when you are suffering. I use Acceptance and Commitment Therapy (ACT) to help people unhook from difficult, tangled thoughts and feelings and live according to their values, and EMDR to support healing from trauma. Together, we figure out what has you feeling stuck and what actions you can take to move toward a full, meaningful life.</p>
+      <p>Before becoming a counselor I spent years in social services in Texas: foster care support, case management for licensed professionals in recovery, and Medicaid-funded in-home care coordination. That background shapes how I collaborate with families, care teams, and community resources.</p>
+    </div>
+  </section>
+
+  <section id="focus">
+    <div class="wrap">
+      <h2>Clinical focus</h2>
+      <p class="sub">Specialties</p>
+      <ul class="chips">
+        <li>Trauma &amp; PTSD</li><li>ADHD</li><li>Anxiety</li><li>Depression</li>
+        <li>Autism</li><li>Domestic abuse</li><li>Child &amp; adolescent counseling</li><li>Family support</li>
+      </ul>
+      <p class="sub">Also experienced with</p>
+      <ul class="chips outline">
+        <li>Relationship issues</li><li>Academic stress</li><li>Grief</li><li>Life transitions</li>
+        <li>Family conflict</li><li>Self-esteem</li><li>Stress</li><li>Coping skills</li>
+        <li>Pregnancy, prenatal &amp; postpartum</li><li>Women's issues</li><li>Peer relationships</li>
+        <li>Severe &amp; persistent mental illness</li>
+      </ul>
+
+      <p class="sub">Approach</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Acceptance &amp; Commitment Therapy</h3>
+          <p>Building psychological flexibility: noticing hard thoughts and feelings without getting hooked, and acting on what matters.</p>
+        </div>
+        <div class="card">
+          <h3>EMDR</h3>
+          <p>A structured, evidence-based therapy for processing traumatic memories so they carry less weight in the present.</p>
+        </div>
+      </div>
+      <p class="sub">Also draws on</p>
+      <ul class="chips outline">
+        <li>Psychodynamic</li><li>Person-centered</li><li>Humanistic</li><li>Compassion-focused</li>
+        <li>Mindfulness-based</li><li>Solution-focused brief</li><li>Trauma-informed care</li><li>Culturally sensitive</li>
+      </ul>
+
+      <p class="sub">How I structure care</p>
+      <ol class="process">
+        <li>Assess client needs</li>
+        <li>Develop the plan</li>
+        <li>Deliver support</li>
+        <li>Coordinate care &amp; manage risk</li>
+        <li>Monitor progress &amp; adapt</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="strengths">
+    <div class="wrap">
+      <h2>Strengths</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Empathetic communicator</h3>
+          <p>Builds trust and rapport with children, adolescents, adults, and families through empathetic listening, clear communication, and a calm presence in sensitive or high-pressure moments.</p>
+        </div>
+        <div class="card">
+          <h3>Collaborative clinician</h3>
+          <p>Works closely with families, multidisciplinary teams, external providers, and community resources to coordinate care and keep services continuous.</p>
+        </div>
+        <div class="card">
+          <h3>Critical thinker</h3>
+          <p>Applies sound clinical judgment when assessing needs, monitoring progress, responding to crises, and adapting treatment to client feedback and changing circumstances.</p>
+        </div>
+        <div class="card">
+          <h3>Adaptable</h3>
+          <p>Adjusts calmly to shifting presentations, priorities, and fast-paced care environments while maintaining professionalism and continuity of support.</p>
+        </div>
+      </div>
+      <p class="sub">Core competencies</p>
+      <ul class="chips outline">
+        <li>Individual psychotherapy</li><li>Clinical assessment &amp; planning</li><li>Biopsychosocial assessment</li>
+        <li>Treatment progress monitoring</li><li>Crisis &amp; safety planning</li><li>Group therapy facilitation</li>
+        <li>Family therapeutic support</li><li>Child &amp; adolescent counseling</li><li>Referral &amp; care coordination</li>
+        <li>Clinical case management</li><li>Interdisciplinary collaboration</li><li>Evidence-based intervention</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Clinical experience</h2>
+      <ul class="timeline">
+        <li>
+          <div class="when">2026 – present</div>
+          <div>
+            <h3>Mental Health Therapist</h3>
+            <div class="where">Group private practice · Denver metro, CO</div>
+            <ul>
+              <li>Manage a caseload of approximately 26 clients, delivering individualized psychotherapy to adults and adolescents experiencing trauma, ADHD, anxiety, relationship challenges, and other concerns.</li>
+              <li>Conduct comprehensive biopsychosocial assessments and prepare treatment plans, progress notes, and clinical records in line with insurance requirements.</li>
+              <li>Apply ACT, EMDR, and psychodynamic principles to guide interventions toward client-defined goals, adapting approach based on clinical observation and client feedback.</li>
+              <li>Coordinate referrals and collaborate with external healthcare and support providers when additional services are needed.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2024 – 2025</div>
+          <div>
+            <h3>Counseling Intern</h3>
+            <div class="where">University Counseling Center · Texas A&amp;M University–Corpus Christi</div>
+            <ul>
+              <li>Provided individual counseling to university students navigating anxiety, depression, trauma, relationship difficulties, and academic pressure.</li>
+              <li>Selected and applied evidence-based interventions matched to each student's needs, and connected students with internal and external resources.</li>
+              <li>Co-facilitated group counseling (8–12 clients) focused on mindfulness skills and practical stress-management strategies.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2024 – 2025</div>
+          <div>
+            <h3>Counseling Intern</h3>
+            <div class="where">Counseling and Training Clinic · Texas A&amp;M University–Corpus Christi</div>
+            <ul>
+              <li>Supported adults, children, and families through evidence-based individual and family-focused interventions.</li>
+              <li>Provided immediate crisis intervention, developed safety plans, and introduced grounding strategies to support stabilization.</li>
+              <li>Adapted therapeutic approaches to the developmental and emotional needs of children and adults.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2024</div>
+          <div>
+            <h3>Counseling Intern</h3>
+            <div class="where">Oceans Healthcare · Corpus Christi, TX</div>
+            <ul>
+              <li>Facilitated psychoeducational and process-based group therapy for adults living with severe and persistent mental illness.</li>
+              <li>Partnered with interdisciplinary team members to design group programming and coordinate referrals and continuity of care.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <h2 style="margin-top:44px">Professional experience</h2>
+      <ul class="timeline">
+        <li>
+          <div class="when">2023 – 2025</div>
+          <div>
+            <h3>Program Coordinator</h3>
+            <div class="where">Consumer Direct Care Network · Corpus Christi, TX (remote)</div>
+            <ul>
+              <li>Oversaw client service budgets, keeping spending and service administration aligned with Medicaid authorizations and state compliance requirements.</li>
+              <li>Guided clients and their employees through in-home enrollment, documentation, and employer training.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2021 – 2023</div>
+          <div>
+            <h3>Case Manager</h3>
+            <div class="where">Professional Recovery Network · Austin, TX</div>
+            <ul>
+              <li>Represented and supported participants in matters involving licensing boards, probation authorities, the DEA, and other organizations.</li>
+              <li>Managed intakes, coordinated required evaluations, and reviewed diagnoses and treatment recommendations with participants.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2020 – 2021</div>
+          <div>
+            <h3>Therapeutic Support Specialist</h3>
+            <div class="where">Benchmark Family Services · Austin, TX</div>
+            <ul>
+              <li>Coordinated case management for a caseload of up to 30 foster parents and children.</li>
+              <li>Provided crisis intervention and on-call support for urgent client and family needs.</li>
+              <li>Trained foster parents in behavioral intervention techniques and agency expectations.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="wrap">
+      <h2>Education &amp; credentials</h2>
+      <dl class="facts">
+        <dt>Graduate</dt>
+        <dd>M.S., Professional Counseling, Clinical Mental Health specialization<small>Texas A&amp;M University–Corpus Christi · 2025</small></dd>
+        <dt>Undergraduate</dt>
+        <dd>B.A., Government &amp; Bachelor of Social Work<small>The University of Texas at Austin</small></dd>
+        <dt>License</dt>
+        <dd>Licensed Professional Counselor Candidate (LPCC.0023985)<small>Colorado Department of Regulatory Agencies · since September 2025</small></dd>
+        <dt>Training</dt>
+        <dd>EMDR trained · Acceptance and Commitment Therapy</dd>
+        <dt>Memberships</dt>
+        <dd>American Counseling Association<small>since January 2025</small></dd>
+        <dt></dt>
+        <dd>Colorado Counseling Association<small>since October 2025</small></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>For professional inquiries and opportunities, the best way to reach me is on LinkedIn.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://www.linkedin.com/in/phoebe-botsford/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://www.psychologytoday.com/us/therapists/overcomers-counseling-phoebe-botson-lpcc-aurora-co/1679108" target="_blank" rel="noopener">Psychology Today</a>
+      </div>
+      <p class="crisis">If you are in crisis, please call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or call 911. This website is not monitored for urgent needs.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Phoebe Botsford, MS, LPCC</span>
+    <span>Denver, Colorado</span>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
